@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>NE Blizzard of '78</title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/14inches_1.js"></script>
+        <script src="data/410inches_2.js"></script>
+        <script src="data/1020inches_3.js"></script>
+        <script src="data/2030inches_4.js"></script>
+        <script src="data/30inches_5.js"></script>
+        <script src="data/StateBorders_6.js"></script>
+        <script src="data/BlizzardPics_7.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:10, minZoom:8
+        }).fitBounds([[40.631357115042775,-75.06787568016038],[44.2361503999911,-68.52133505789769]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+            map.setMaxBounds(map.getBounds());
+        }
+        var layer_ESRISatelliteArcGISWorld_Imagery_0 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            opacity: 1.0
+        });
+        layer_ESRISatelliteArcGISWorld_Imagery_0.addTo(map);
+        map.addLayer(layer_ESRISatelliteArcGISWorld_Imagery_0);
+        function pop_14inches_1(feature, layer) {
+        }
+
+        function style_14inches_1_0() {
+            return {
+                pane: 'pane_14inches_1',
+                opacity: 1,
+                color: 'rgba(63,59,59,0.8823529411764706)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: .7,
+                fillColor: 'rgba(162,162,162,1.0)',
+            }
+        }
+        map.createPane('pane_14inches_1');
+        map.getPane('pane_14inches_1').style.zIndex = 401;
+        map.getPane('pane_14inches_1').style['mix-blend-mode'] = 'normal';
+        var layer_14inches_1 = new L.geoJson(json_14inches_1, {
+            attribution: '',
+            pane: 'pane_14inches_1',
+            onEachFeature: pop_14inches_1,
+            style: style_14inches_1_0,
+        });
+        bounds_group.addLayer(layer_14inches_1);
+        map.addLayer(layer_14inches_1);
+        function pop_410inches_2(feature, layer) {
+        }
+
+        function style_410inches_2_0() {
+            return {
+                pane: 'pane_410inches_2',
+                opacity: 1,
+                color: 'rgba(255,255,255,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: .7,
+                fillColor: 'rgba(255,255,255,1.0)',
+            }
+        }
+        map.createPane('pane_410inches_2');
+        map.getPane('pane_410inches_2').style.zIndex = 402;
+        map.getPane('pane_410inches_2').style['mix-blend-mode'] = 'normal';
+        var layer_410inches_2 = new L.geoJson(json_410inches_2, {
+            attribution: '',
+            pane: 'pane_410inches_2',
+            onEachFeature: pop_410inches_2,
+            style: style_410inches_2_0,
+        });
+        bounds_group.addLayer(layer_410inches_2);
+        map.addLayer(layer_410inches_2);
+        function pop_1020inches_3(feature, layer) {
+        }
+
+        function style_1020inches_3_0() {
+            return {
+                pane: 'pane_1020inches_3',
+                opacity: 1,
+                color: 'rgba(164,227,245,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: .7,
+                fillColor: 'rgba(122,203,243,1.0)',
+            }
+        }
+        map.createPane('pane_1020inches_3');
+        map.getPane('pane_1020inches_3').style.zIndex = 403;
+        map.getPane('pane_1020inches_3').style['mix-blend-mode'] = 'normal';
+        var layer_1020inches_3 = new L.geoJson(json_1020inches_3, {
+            attribution: '',
+            pane: 'pane_1020inches_3',
+            onEachFeature: pop_1020inches_3,
+            style: style_1020inches_3_0,
+        });
+        bounds_group.addLayer(layer_1020inches_3);
+        map.addLayer(layer_1020inches_3);
+        function pop_2030inches_4(feature, layer) {
+        }
+
+        function style_2030inches_4_0() {
+            return {
+                pane: 'pane_2030inches_4',
+                opacity: 1,
+                color: 'rgba(42,50,125,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: .7,
+                fillColor: 'rgba(35,69,206,1.0)',
+            }
+        }
+        map.createPane('pane_2030inches_4');
+        map.getPane('pane_2030inches_4').style.zIndex = 404;
+        map.getPane('pane_2030inches_4').style['mix-blend-mode'] = 'normal';
+        var layer_2030inches_4 = new L.geoJson(json_2030inches_4, {
+            attribution: '',
+            pane: 'pane_2030inches_4',
+            onEachFeature: pop_2030inches_4,
+            style: style_2030inches_4_0,
+        });
+        bounds_group.addLayer(layer_2030inches_4);
+        map.addLayer(layer_2030inches_4);
+        function pop_30inches_5(feature, layer) {
+        }
+
+        function style_30inches_5_0() {
+            return {
+                pane: 'pane_30inches_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: .7,
+                fillColor: 'rgba(244,5,17,1.0)',
+            }
+        }
+        map.createPane('pane_30inches_5');
+        map.getPane('pane_30inches_5').style.zIndex = 405;
+        map.getPane('pane_30inches_5').style['mix-blend-mode'] = 'normal';
+        var layer_30inches_5 = new L.geoJson(json_30inches_5, {
+            attribution: '',
+            pane: 'pane_30inches_5',
+            onEachFeature: pop_30inches_5,
+            style: style_30inches_5_0,
+        });
+        bounds_group.addLayer(layer_30inches_5);
+        map.addLayer(layer_30inches_5);
+        function pop_StateBorders_6(feature, layer) {
+        }
+
+        function style_StateBorders_6_0() {
+            return {
+                pane: 'pane_StateBorders_6',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+            }
+        }
+        map.createPane('pane_StateBorders_6');
+        map.getPane('pane_StateBorders_6').style.zIndex = 406;
+        map.getPane('pane_StateBorders_6').style['mix-blend-mode'] = 'normal';
+        var layer_StateBorders_6 = new L.geoJson(json_StateBorders_6, {
+            attribution: '',
+            pane: 'pane_StateBorders_6',
+            onEachFeature: pop_StateBorders_6,
+            style: style_StateBorders_6_0,
+        });
+        bounds_group.addLayer(layer_StateBorders_6);
+        map.addLayer(layer_StateBorders_6);
+        function pop_BlizzardPics_7(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? Autolinker.link(String(feature.properties['Name'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><img src="' + feature.properties['RelPath'] + '"</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['PhotoSrc'] !== null ? Autolinker.link(String(feature.properties['PhotoSrc'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Desc'] !== null ? Autolinker.link(String(feature.properties['Desc'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_BlizzardPics_7_0() {
+            return {
+                pane: 'pane_BlizzardPics_7',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,255,255,1.0)',
+            }
+        }
+        map.createPane('pane_BlizzardPics_7');
+        map.getPane('pane_BlizzardPics_7').style.zIndex = 407;
+        map.getPane('pane_BlizzardPics_7').style['mix-blend-mode'] = 'normal';
+        var layer_BlizzardPics_7 = new L.geoJson(json_BlizzardPics_7, {
+            attribution: '',
+            pane: 'pane_BlizzardPics_7',
+            onEachFeature: pop_BlizzardPics_7,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_BlizzardPics_7_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_BlizzardPics_7);
+        map.addLayer(layer_BlizzardPics_7);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/BlizzardPics_7.png" /> BlizzardPics': layer_BlizzardPics_7,'<img src="legend/StateBorders_6.png" /> StateBorders': layer_StateBorders_6,'<img src="legend/30inches_5.png" /> 30+ inches': layer_30inches_5,'<img src="legend/2030inches_4.png" /> 20-30 inches': layer_2030inches_4,'<img src="legend/1020inches_3.png" /> 10-20 inches': layer_1020inches_3,'<img src="legend/410inches_2.png" /> 4-10 inches': layer_410inches_2,'<img src="legend/14inches_1.png" /> 1-4 inches': layer_14inches_1,"ESRI Satellite (ArcGIS/World_Imagery)": layer_ESRISatelliteArcGISWorld_Imagery_0,}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
